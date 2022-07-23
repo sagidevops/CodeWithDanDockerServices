@@ -3,7 +3,7 @@ FROM node:lts-alpine
 LABEL author="Dan Wahlin"
 
 WORKDIR /var/www/codewithdan
-
+RUN     npm install
 EXPOSE 		8080
 
 ENTRYPOINT [ "node", "server.js" ]
