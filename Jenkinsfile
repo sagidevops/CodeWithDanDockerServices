@@ -7,4 +7,7 @@ node() {
         export DOCKER_ACCT=sagie350 && \
         docker-compose build'''
     }
+    stage('run test') {
+        sh '''docker-compose up'''
+    }
 }
