@@ -51,7 +51,7 @@ services:
         context: .
         dockerfile: .docker/node-codewithdan.${APP_ENV}.dockerfile
       ports:
-      - "8080"
+      - "8080:8081"
       volumes:
         - .:/var/www/codewithdan
       working_dir: /var/www/codewithdan
@@ -96,7 +96,7 @@ services:
     #     - /sys:/sys:ro
     #     - /var/lib/docker/:/var/lib/docker:ro
     #   ports:
-    #     - "8080:8080"
+    #     - "8080:8081"
     #   networks:
     #     - codewithdan-network
         
