@@ -3,6 +3,7 @@ FROM node:lts-alpine
 LABEL author="Dan Wahlin"
 
 WORKDIR /var/www/codewithdan
+COPY . .
 RUN     npm install
 EXPOSE 		8080
 
