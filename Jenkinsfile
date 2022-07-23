@@ -10,6 +10,6 @@ node() {
     stage('run test') {
     sh '''export APP_ENV=development && \
     export DOCKER_ACCT=sagie350 && \
-    docker compose up'''
+    docker-compose up'''
     }
 }
