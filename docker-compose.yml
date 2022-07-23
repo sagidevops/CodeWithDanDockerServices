@@ -51,7 +51,7 @@ services:
         context: .
         dockerfile: .docker/node-codewithdan.${APP_ENV}.dockerfile
       ports:
-      - "8080:8081"
+      - "8081:8080"
       env_file:
         - ./.docker/env/app.${APP_ENV}.env
       depends_on:
