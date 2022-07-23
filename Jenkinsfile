@@ -1,6 +1,6 @@
 node() {
-        sh '''export APP_ENV=development && \
-        DOCKER_ACCT=sagie350'''
+    sh '''export APP_ENV=development && \
+    export DOCKER_ACCT=sagie350'''
     stage('checkout code') {
     checkout([$class: 'GitSCM', branches: [[name: 'develop']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'git@github.com:sagidevops/CodeWithDanDockerServices.git']]])
     }
