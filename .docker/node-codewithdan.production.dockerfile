@@ -1,11 +1,17 @@
-FROM 		node:latest
+FROM node:alpine
 
 LABEL author="Dan Wahlin"
 
-COPY    . /var/www/codewithdan
 WORKDIR /var/www/codewithdan
 
+COPY ./package.json .
+COPY ./package-lock.json .
+
+ENV NODE_ENV production
 RUN npm install -g pm2@latest
+RUN npm install
+
+COPY    . .
 
 RUN mkdir -p /var/log/pm2
 
