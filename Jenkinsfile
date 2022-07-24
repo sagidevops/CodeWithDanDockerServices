@@ -1,6 +1,6 @@
 node() {
     stage('checkout code') {
-    checkout([$class: 'GitSCM', branches: [[name: 'develop']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'git@github.com:sagidevops/CodeWithDanDockerServices.git']]])
+    checkout([$class: 'GitSCM', branches: [[name: 'develop']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github-creds', url: 'git@github.com:sagidevops/CodeWithDanDockerServices.git']]])
     }
     stage('build') {
     sh '''export APP_ENV=development && \
